@@ -16,8 +16,9 @@ namespace Hospital
         {
             InitializeComponent();
         }
+        Doctor doctor;
 
-        List<Doctor> DoctorsList= new List<Doctor>();
+        //List<Doctor> DoctorsList= new List<Doctor>();
         
 
 
@@ -27,16 +28,19 @@ namespace Hospital
             {
                 MessageBox.Show("Enter all the fields!");
             }
-            else if (Status.Text == "Doctor" && Status.Text != "" && Login.Text != "" && Password.Text != "")
+           else if (Status.Text == "Doctor" && Status.Text != "" && Login.Text != "" && Password.Text != "")
             {
                 Doctor doctor = new Doctor();
 
                 doctor.Name = Login.Text;
                 doctor.Password = Password.Text;
-
-
-                DoctorsList.Add(doctor);
             }
+            
+
+
+
+            LogInForm logInForm = new LogInForm(this, doctor);
+            logInForm.Show();
         }
 
         private void eye_Click(object sender, EventArgs e)
@@ -51,16 +55,7 @@ namespace Hospital
             }
         }
 
-        private void LogBtn_Click(object sender, EventArgs e)
-        {
-            
 
-           /* LogInForm logInForm = new LogInForm();
-            logInForm.Show();*/
-            
-
-
-        }
 
         private void Main_KeyDown(object sender, KeyEventArgs e)
         {
@@ -68,6 +63,21 @@ namespace Hospital
             {
                 this.Close();
             }
-        } // Q
+        }
+
+        private void Status_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Status.SelectedIndex==0)
+            {
+                sp1.Visible = true;
+                sp2.Visible = true;
+            }
+            else
+            {
+                sp1.Visible = false;
+                sp2.Visible = false;
+            }
+
+        }
     }
 }

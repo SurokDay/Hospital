@@ -18,3 +18,6 @@ A:\Sergey\C sharp\Home-train\Hospital\obj\Debug\net5.0-windows\Hospital.genrunti
 A:\Sergey\C sharp\Home-train\Hospital\obj\Debug\net5.0-windows\Hospital.Main.resources
 A:\Sergey\C sharp\Home-train\Hospital\obj\Debug\net5.0-windows\Hospital.Properties.Resources.resources
 A:\Sergey\C sharp\Home-train\Hospital\obj\Debug\net5.0-windows\Hospital.LogInForm.resources
+A:\Sergey\C sharp\Home-train\Hospital\obj\Debug\net5.0-windows\Hospital.FAdmin.resources
+A:\Sergey\C sharp\Home-train\Hospital\obj\Debug\net5.0-windows\Hospital.FDoctor.resources
+A:\Sergey\C sharp\Home-train\Hospital\obj\Debug\net5.0-windows\Hospital.FPatient.resources

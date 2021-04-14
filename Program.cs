@@ -19,14 +19,17 @@ namespace Hospital
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            List<Form> FormList = new List<Form>();
-
+            
+            
             Form main = new Main();
+            
+            
+           /* List<Form> FormList = new List<Form>();
+
             Form LogInForm = new LogInForm();
 
             FormList.Add(main);
-            FormList.Add(LogInForm);
+            FormList.Add(LogInForm);*/
 
 
 

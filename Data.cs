@@ -8,6 +8,8 @@ namespace Hospital
 {
     class Data
     {
-
+        List<Doctor> ListDoctors;
+        List<Patient> ListPatient;
+        List<Admin> ListAdmin;
     }
 }

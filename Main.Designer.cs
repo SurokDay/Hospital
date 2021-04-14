@@ -42,7 +42,8 @@ namespace Hospital
             this.Email = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.LogBtn = new System.Windows.Forms.Button();
+            this.sp2 = new System.Windows.Forms.TextBox();
+            this.sp1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eye)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +57,7 @@ namespace Hospital
             this.SignIn.Name = "SignIn";
             this.SignIn.Size = new System.Drawing.Size(781, 167);
             this.SignIn.TabIndex = 0;
-            this.SignIn.Text = "Sign in";
+            this.SignIn.Text = "Check in";
             this.SignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.SignIn.Click += new System.EventHandler(this.SignIn_Click);
             // 
@@ -64,7 +65,7 @@ namespace Hospital
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(139, 181);
+            this.label1.Location = new System.Drawing.Point(188, 169);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 35);
             this.label1.TabIndex = 1;
@@ -74,7 +75,7 @@ namespace Hospital
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(139, 381);
+            this.label3.Location = new System.Drawing.Point(188, 351);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 35);
             this.label3.TabIndex = 3;
@@ -84,7 +85,7 @@ namespace Hospital
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(139, 253);
+            this.label4.Location = new System.Drawing.Point(188, 220);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 35);
             this.label4.TabIndex = 4;
@@ -107,15 +108,16 @@ namespace Hospital
             "Doctor",
             "Patient",
             "Admin"});
-            this.Status.Location = new System.Drawing.Point(321, 188);
+            this.Status.Location = new System.Drawing.Point(370, 169);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(185, 31);
             this.Status.TabIndex = 6;
+            this.Status.SelectedIndexChanged += new System.EventHandler(this.Status_SelectedIndexChanged);
             // 
             // Login
             // 
             this.Login.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Login.Location = new System.Drawing.Point(321, 260);
+            this.Login.Location = new System.Drawing.Point(370, 225);
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(185, 30);
             this.Login.TabIndex = 7;
@@ -123,7 +125,7 @@ namespace Hospital
             // Password
             // 
             this.Password.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Password.Location = new System.Drawing.Point(321, 388);
+            this.Password.Location = new System.Drawing.Point(370, 358);
             this.Password.Name = "Password";
             this.Password.PasswordChar = '*';
             this.Password.Size = new System.Drawing.Size(185, 30);
@@ -133,7 +135,7 @@ namespace Hospital
             // 
             this.eye.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eye.Image = global::Hospital.Properties.Resources.eye1;
-            this.eye.Location = new System.Drawing.Point(522, 381);
+            this.eye.Location = new System.Drawing.Point(591, 351);
             this.eye.Name = "eye";
             this.eye.Size = new System.Drawing.Size(50, 41);
             this.eye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -144,7 +146,7 @@ namespace Hospital
             // Surname
             // 
             this.Surname.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Surname.Location = new System.Drawing.Point(321, 322);
+            this.Surname.Location = new System.Drawing.Point(370, 283);
             this.Surname.Name = "Surname";
             this.Surname.PasswordChar = '*';
             this.Surname.Size = new System.Drawing.Size(185, 30);
@@ -153,7 +155,7 @@ namespace Hospital
             // Email
             // 
             this.Email.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Email.Location = new System.Drawing.Point(321, 449);
+            this.Email.Location = new System.Drawing.Point(370, 416);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(185, 30);
             this.Email.TabIndex = 12;
@@ -162,7 +164,7 @@ namespace Hospital
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(139, 442);
+            this.label2.Location = new System.Drawing.Point(188, 411);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 35);
             this.label2.TabIndex = 11;
@@ -172,27 +174,37 @@ namespace Hospital
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(139, 315);
+            this.label5.Location = new System.Drawing.Point(188, 283);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 35);
             this.label5.TabIndex = 10;
             this.label5.Text = "Surname:";
             // 
-            // LogBtn
+            // sp2
             // 
-            this.LogBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogBtn.Location = new System.Drawing.Point(620, 315);
-            this.LogBtn.Name = "LogBtn";
-            this.LogBtn.Size = new System.Drawing.Size(94, 29);
-            this.LogBtn.TabIndex = 14;
-            this.LogBtn.Text = "Log in";
-            this.LogBtn.UseVisualStyleBackColor = true;
-            this.LogBtn.Click += new System.EventHandler(this.LogBtn_Click);
+            this.sp2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sp2.Location = new System.Drawing.Point(370, 470);
+            this.sp2.Name = "sp2";
+            this.sp2.Size = new System.Drawing.Size(185, 30);
+            this.sp2.TabIndex = 16;
+            this.sp2.Visible = false;
+            // 
+            // sp1
+            // 
+            this.sp1.AutoSize = true;
+            this.sp1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sp1.Location = new System.Drawing.Point(188, 470);
+            this.sp1.Name = "sp1";
+            this.sp1.Size = new System.Drawing.Size(123, 35);
+            this.sp1.TabIndex = 15;
+            this.sp1.Text = "Specialist:";
+            this.sp1.Visible = false;
             // 
             // Main
             // 
             this.ClientSize = new System.Drawing.Size(781, 534);
-            this.Controls.Add(this.LogBtn);
+            this.Controls.Add(this.sp2);
+            this.Controls.Add(this.sp1);
             this.Controls.Add(this.Surname);
             this.Controls.Add(this.Email);
             this.Controls.Add(this.label2);
@@ -231,6 +243,7 @@ namespace Hospital
         private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button LogBtn;
+        private System.Windows.Forms.TextBox sp2;
+        private System.Windows.Forms.Label sp1;
     }
 }
