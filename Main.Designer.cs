@@ -148,7 +148,6 @@ namespace Hospital
             this.Surname.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Surname.Location = new System.Drawing.Point(370, 283);
             this.Surname.Name = "Surname";
-            this.Surname.PasswordChar = '*';
             this.Surname.Size = new System.Drawing.Size(185, 30);
             this.Surname.TabIndex = 13;
             // 

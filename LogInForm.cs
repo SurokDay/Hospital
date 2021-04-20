@@ -21,6 +21,9 @@ namespace Hospital
             this.doctor = doctor;
             main = form;
             InitializeComponent();
+
+            Status.SelectedItem = "00";
+
         }
 
         private void BTNreturn_Click(object sender, EventArgs e)
@@ -31,19 +34,84 @@ namespace Hospital
 
         private void LogIn_Click(object sender, EventArgs e)
         {
-            if (TBlogin!.Text!=""&&TBpass.Text!="")
+            Data data = new Data();
+
+
+            if (TBlogin!.Text == "" && TBpass.Text == "")
             {
-                
+                MessageBox.Show("Enter the fields!");
             }
-            else
+
+            else if (Status.Text == "Doctor")
             {
-                MessageBox.Show("Enter all the fields!");
+                check(data.GiveDoctors());
+            }
+            else if (Status.Text == "Patient")
+            {
+                check(data.GivePatient());
+            }
+            else if (Status.Text == "Admin")
+            {
+                check(data.GiveAdmins());
             }
         }
 
-        private void LogInForm_Load(object sender, EventArgs e)
+        private void check(List<Doctor> doctors)
         {
-
+            foreach (var item in doctors)
+            {
+                if (item.Name == TBlogin.Text && item.Password == TBpass.Text)
+                {
+                    Quit(doctors);
+                }
+            }
         }
+        private void check(List<Patient> patients)
+        {
+            foreach (var item in patients)
+            {
+                if (item.Name == TBlogin.Text && item.Password == TBpass.Text)
+                {
+                    Quit(patients);
+                }
+            }
+        }
+
+        
+        private void check(List<Admin> admins)
+        {
+            foreach (var item in admins)
+            {
+                if (item.Name == TBlogin.Text && item.Password == TBpass.Text)
+                {
+                    Quit(admins);
+                }
+            }
+        }
+
+       
+
+        private void Quit(List<Doctor> doctors)
+        {
+            this.Close();
+
+            FDoctor fDoctor = new FDoctor();
+            fDoctor.Show();
+        }
+        private void Quit(List<Patient> patients)
+        {
+            this.Close();
+
+            FPatient fPatient = new FPatient();
+            fPatient.Show();
+        }
+        private void Quit(List<Admin> admins)
+        {
+            this.Close();
+
+            FAdmin fAdmin = new FAdmin();
+            fAdmin.Show();
+        }
+
     }
 }

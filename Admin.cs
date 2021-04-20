@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    class Admin : IUser
+    public class Admin : IUser
     {
         public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Surname { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    class Patient : IUser
+    public class Patient : IUser
     {
-        public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Surname { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Password { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Email { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Name { get; set; }
+        public string Surname { get; set ; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+
+        public string Receipt { get; set; }
+        public bool OutPatientTreatment { get; set; }
+
+
+
     }
 }

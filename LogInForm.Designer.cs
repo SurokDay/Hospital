@@ -36,6 +36,8 @@ namespace Hospital
             this.TBlogin = new System.Windows.Forms.TextBox();
             this.TBpass = new System.Windows.Forms.TextBox();
             this.BTNreturn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Status = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // LogIn
@@ -63,7 +65,7 @@ namespace Hospital
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(206, 191);
+            this.label2.Location = new System.Drawing.Point(206, 217);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 35);
             this.label2.TabIndex = 2;
@@ -73,7 +75,7 @@ namespace Hospital
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(206, 244);
+            this.label3.Location = new System.Drawing.Point(206, 270);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 35);
             this.label3.TabIndex = 3;
@@ -82,7 +84,7 @@ namespace Hospital
             // TBlogin
             // 
             this.TBlogin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TBlogin.Location = new System.Drawing.Point(385, 196);
+            this.TBlogin.Location = new System.Drawing.Point(385, 222);
             this.TBlogin.Name = "TBlogin";
             this.TBlogin.Size = new System.Drawing.Size(229, 30);
             this.TBlogin.TabIndex = 4;
@@ -90,7 +92,7 @@ namespace Hospital
             // TBpass
             // 
             this.TBpass.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TBpass.Location = new System.Drawing.Point(385, 249);
+            this.TBpass.Location = new System.Drawing.Point(385, 275);
             this.TBpass.Name = "TBpass";
             this.TBpass.Size = new System.Drawing.Size(229, 30);
             this.TBpass.TabIndex = 5;
@@ -106,11 +108,36 @@ namespace Hospital
             this.BTNreturn.UseVisualStyleBackColor = true;
             this.BTNreturn.Click += new System.EventHandler(this.BTNreturn_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(206, 157);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 35);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Status";
+            // 
+            // Status
+            // 
+            this.Status.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Status.FormattingEnabled = true;
+            this.Status.Items.AddRange(new object[] {
+            "Doctor",
+            "Patient",
+            "Admin"});
+            this.Status.Location = new System.Drawing.Point(385, 164);
+            this.Status.Name = "Status";
+            this.Status.Size = new System.Drawing.Size(229, 31);
+            this.Status.TabIndex = 8;
+            // 
             // LogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Status);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.BTNreturn);
             this.Controls.Add(this.TBpass);
             this.Controls.Add(this.TBlogin);
@@ -120,7 +147,6 @@ namespace Hospital
             this.Controls.Add(this.LogIn);
             this.Name = "LogInForm";
             this.Text = "LogIn";
-            this.Load += new System.EventHandler(this.LogInForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +161,7 @@ namespace Hospital
         private System.Windows.Forms.TextBox TBlogin;
         private System.Windows.Forms.TextBox TBpass;
         private System.Windows.Forms.Button BTNreturn;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox Status;
     }
 }

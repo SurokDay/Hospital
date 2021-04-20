@@ -6,10 +6,47 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    class Data
+    public class Data
     {
-        List<Doctor> ListDoctors;
-        List<Patient> ListPatient;
-        List<Admin> ListAdmin;
+        public static List<Doctor> ListDoctors = new List<Doctor>() ;
+        public static List<Patient> ListPatient = new List<Patient>()
+        { 
+            new Patient() {Name = "Alex", Surname = "Makedonskii"},
+            new Patient() {Name = "Olena", Surname = "Pchilka"}
+        }
+        ;
+        public static List<Admin> ListAdmin = new List<Admin>();
+
+        public Data()
+        {
+            
+        }
+        public Data(Doctor doctor)
+        {
+            ListDoctors.Add(doctor);
+        }
+
+        public Data(Patient patient)
+        {
+            ListPatient.Add(patient);
+        }
+
+        public Data(Admin admin)
+        {
+            ListAdmin.Add(admin);
+        }
+
+        public List<Doctor> GiveDoctors()
+        {
+            return ListDoctors;
+        }
+        public List<Patient> GivePatient()
+        {
+            return ListPatient;
+        }
+        public List<Admin> GiveAdmins()
+        {
+            return ListAdmin;
+        }
     }
 }
