@@ -37,14 +37,10 @@ namespace Hospital
         {
             ListAdmin.Add(admin);
         }
-
         public List<Doctor> GiveDoctors()
         {
             return ListDoctors;
         }
-
-       
-
         public List<Patient> GivePatient()
         {
             return ListPatient;
@@ -53,7 +49,6 @@ namespace Hospital
         {
             return ListAdmin;
         }
-
         public void DeleteDoctors(Doctor doctor)
         {
             ListDoctors.Remove(doctor);
@@ -62,6 +57,5 @@ namespace Hospital
         {
             ListPatient.Remove(patient);
         }
-
     }
 }

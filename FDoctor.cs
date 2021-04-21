@@ -12,10 +12,11 @@ namespace Hospital
 {
     public partial class FDoctor : Form
     {
-
         Form LogInForm;
 
         Data data = new Data();
+
+        Patient CurrentPatient;
 
         public FDoctor(LogInForm logInForm, Doctor doctor)
         {
@@ -42,6 +43,8 @@ namespace Hospital
                     LBName.Text = item.Name;
                     LBEmail.Text = item.Email;
                     LBSurname.Text = item.Surname;
+
+                    CurrentPatient = item;
                 }
             }
         }
@@ -51,6 +54,11 @@ namespace Hospital
             this.Close();
         }
 
-        
+        private void BTNReceipt_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Created receipt");
+            CurrentPatient.Receipt = TBReceipt.Text;
+            CurrentPatient.OutPatientTreatment = CheckB.Checked;
+        }
     }
 }

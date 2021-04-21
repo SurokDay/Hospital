@@ -37,9 +37,9 @@ namespace Hospital
             this.LBEmail = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.TBReceipt = new System.Windows.Forms.TextBox();
+            this.BTNReceipt = new System.Windows.Forms.Button();
+            this.CheckB = new System.Windows.Forms.CheckBox();
             this.BTNreturn = new System.Windows.Forms.Button();
             this.LBWelcome = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -120,34 +120,35 @@ namespace Hospital
             this.label2.TabIndex = 10;
             this.label2.Text = "Receipt";
             // 
-            // textBox1
+            // TBReceipt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(37, 331);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(421, 91);
-            this.textBox1.TabIndex = 11;
+            this.TBReceipt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TBReceipt.Location = new System.Drawing.Point(37, 331);
+            this.TBReceipt.Multiline = true;
+            this.TBReceipt.Name = "TBReceipt";
+            this.TBReceipt.Size = new System.Drawing.Size(421, 91);
+            this.TBReceipt.TabIndex = 11;
             // 
-            // button1
+            // BTNReceipt
             // 
-            this.button1.Location = new System.Drawing.Point(364, 285);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BTNReceipt.Location = new System.Drawing.Point(364, 285);
+            this.BTNReceipt.Name = "BTNReceipt";
+            this.BTNReceipt.Size = new System.Drawing.Size(94, 29);
+            this.BTNReceipt.TabIndex = 12;
+            this.BTNReceipt.Text = "Save";
+            this.BTNReceipt.UseVisualStyleBackColor = true;
+            this.BTNReceipt.Click += new System.EventHandler(this.BTNReceipt_Click);
             // 
-            // checkBox1
+            // CheckB
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.Location = new System.Drawing.Point(517, 360);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(249, 36);
-            this.checkBox1.TabIndex = 15;
-            this.checkBox1.Text = "OutPatienTreatment";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.CheckB.AutoSize = true;
+            this.CheckB.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CheckB.Location = new System.Drawing.Point(517, 360);
+            this.CheckB.Name = "CheckB";
+            this.CheckB.Size = new System.Drawing.Size(249, 36);
+            this.CheckB.TabIndex = 15;
+            this.CheckB.Text = "OutPatienTreatment";
+            this.CheckB.UseVisualStyleBackColor = true;
             // 
             // BTNreturn
             // 
@@ -177,9 +178,9 @@ namespace Hospital
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.LBWelcome);
             this.Controls.Add(this.BTNreturn);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CheckB);
+            this.Controls.Add(this.BTNReceipt);
+            this.Controls.Add(this.TBReceipt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LBEmail);
             this.Controls.Add(this.label5);
@@ -205,9 +206,9 @@ namespace Hospital
         private System.Windows.Forms.Label LBEmail;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox TBReceipt;
+        private System.Windows.Forms.Button BTNReceipt;
+        private System.Windows.Forms.CheckBox CheckB;
         private System.Windows.Forms.Button BTNreturn;
         private System.Windows.Forms.Label LBWelcome;
     }

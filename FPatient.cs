@@ -16,10 +16,19 @@ namespace Hospital
         {
             InitializeComponent();
 
-
             Lbname.Text = patient.Name;
             LBsurname.Text = patient.Surname;
             LBemail.Text = patient.Email;
+
+            if (patient.Receipt == "")
+            {
+                LBReceipt.Text = "You haven't receipt";
+            }
+            else
+            {
+                LBReceipt.Text = "You have receipt";
+            }
+
         }
 
         private void BTNreturn_Click(object sender, EventArgs e)
@@ -31,5 +40,7 @@ namespace Hospital
         {
             MessageBox.Show("Поздравляю ! Вы смогли встать в очередь к врачу!!!");
         }
+
+        
     }
 }
