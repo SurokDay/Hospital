@@ -39,11 +39,13 @@ namespace Hospital
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BTNSave = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LBReceipt = new System.Windows.Forms.Label();
+            this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
+            this.MakeAppointment = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LBWelcome
@@ -129,13 +131,10 @@ namespace Hospital
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(35, 290);
+            this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 29);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "MakeAppointment";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 32;
             // 
             // button2
             // 
@@ -146,14 +145,15 @@ namespace Hospital
             this.button2.Text = "Use FreeDrugsCours";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BTNSave
             // 
-            this.button3.Location = new System.Drawing.Point(35, 404);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(225, 29);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Save receipt";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BTNSave.Location = new System.Drawing.Point(35, 404);
+            this.BTNSave.Name = "BTNSave";
+            this.BTNSave.Size = new System.Drawing.Size(225, 29);
+            this.BTNSave.TabIndex = 27;
+            this.BTNSave.Text = "Save receipt";
+            this.BTNSave.UseVisualStyleBackColor = true;
+            this.BTNSave.Click += new System.EventHandler(this.BTNSave_Click);
             // 
             // button4
             // 
@@ -193,16 +193,27 @@ namespace Hospital
             this.LBReceipt.TabIndex = 31;
             this.LBReceipt.Text = "label3";
             // 
+            // MakeAppointment
+            // 
+            this.MakeAppointment.Location = new System.Drawing.Point(35, 287);
+            this.MakeAppointment.Name = "MakeAppointment";
+            this.MakeAppointment.Size = new System.Drawing.Size(225, 29);
+            this.MakeAppointment.TabIndex = 33;
+            this.MakeAppointment.Text = "MakeAppointment";
+            this.MakeAppointment.UseVisualStyleBackColor = true;
+            this.MakeAppointment.Click += new System.EventHandler(this.MakeAppointment_Click);
+            // 
             // FPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.MakeAppointment);
             this.Controls.Add(this.LBReceipt);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.BTNSave);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.LBemail);
@@ -231,10 +242,13 @@ namespace Hospital
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BTNSave;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label LBReceipt;
+        private System.Windows.Forms.FolderBrowserDialog FolderBrowser;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button MakeAppointment;
     }
 }

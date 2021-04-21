@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +13,12 @@ namespace Hospital
 {
     public partial class FPatient : Form
     {
+        Patient Patient = new Patient();
         public FPatient(LogInForm logInForm, Patient patient)
         {
             InitializeComponent();
+
+            Patient = patient;
 
             Lbname.Text = patient.Name;
             LBsurname.Text = patient.Surname;
@@ -36,11 +40,22 @@ namespace Hospital
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void MakeAppointment_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Поздравляю ! Вы смогли встать в очередь к врачу!!!");
+            MessageBox.Show("Congratulation! You are in que to the doctor :D");
         }
 
-        
+        private void BTNSave_Click(object sender, EventArgs e)
+        {
+            if (FolderBrowser.ShowDialog() == DialogResult.OK)
+            {
+                string path = FolderBrowser.SelectedPath;
+
+                File.WriteAllText($@"{path}\receipt.txt", Patient.Receipt);
+                MessageBox.Show("Receipt.txt was created!");
+            }
+        }
+
+       
     }
 }
