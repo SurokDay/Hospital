@@ -15,6 +15,7 @@ namespace Hospital
         public FAdmin()
         {
             InitializeComponent();
+
         }
     }
 }

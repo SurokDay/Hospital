@@ -35,6 +35,9 @@ namespace Hospital
 
                 doctor.Name = Login.Text;
                 doctor.Password = Password.Text;
+                doctor.Email = Email.Text;
+                doctor.Surname = Surname.Text;
+
 
                 Data data = new Data(doctor);
                 
@@ -46,6 +49,8 @@ namespace Hospital
 
                 patient.Name = Login.Text;
                 patient.Password = Password.Text;
+                patient.Email = Email.Text;
+                patient.Surname = Surname.Text;
 
                 Data data = new Data(patient);
 
@@ -57,6 +62,8 @@ namespace Hospital
 
                 admin.Name = Login.Text;
                 admin.Password = Password.Text;
+                admin.Email = Email.Text;
+                admin.Surname = Surname.Text;
 
                 Data data = new Data(admin);
 

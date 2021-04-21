@@ -11,8 +11,8 @@ namespace Hospital
         public static List<Doctor> ListDoctors = new List<Doctor>() ;
         public static List<Patient> ListPatient = new List<Patient>()
         { 
-            new Patient() {Name = "Alex", Surname = "Makedonskii"},
-            new Patient() {Name = "Olena", Surname = "Pchilka"}
+            new Patient() {Name = "Alex", Surname = "Makedonskii", Email = "Alex@gmail.com"},
+            new Patient() {Name = "Olena", Surname = "Pchilka", Email = "Olena@gmail.com"}
         }
         ;
         public static List<Admin> ListAdmin = new List<Admin>();

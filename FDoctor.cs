@@ -12,40 +12,31 @@ namespace Hospital
 {
     public partial class FDoctor : Form
     {
+
+        Data data = new Data();
+
+        string identify;
         public FDoctor()
         {
             InitializeComponent();
 
-            LBList.Text = "";
-
-            Data data = new Data();
-
             foreach (var item in data.GivePatient())
             {
-                LBList.Text += item.Name + " " + item.Surname+'\n';
-
+                CBDoctor.Items.Add(item.Name +" " +item.Surname);
             }
+        }
 
-            RadioButton radioButton = new RadioButton()
+        private void CBAdmin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var item in data.GivePatient())
             {
-                Text = "",
-                Location = new Point(10, 10),
-                TabIndex = 10
-            };
-
-
-
-            for (int i = 0; i < data.GivePatient().Count; i++)
-            {
-                
-
+                if (CBDoctor.Text == item.Name +" " +item.Surname)
+                {
+                    LBName.Text = item.Name;
+                    LBEmail.Text = item.Email;
+                    LBSurname.Text = item.Surname;
+                }
             }
-
-
-
-
-
-
         }
     }
 }
