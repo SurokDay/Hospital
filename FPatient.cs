@@ -24,7 +24,7 @@ namespace Hospital
             LBsurname.Text = patient.Surname;
             LBemail.Text = patient.Email;
 
-            if (patient.Receipt == "")
+            if (patient.receipt.info == "")
             {
                 LBReceipt.Text = "You haven't receipt";
             }
@@ -51,7 +51,7 @@ namespace Hospital
             {
                 string path = FolderBrowser.SelectedPath;
 
-                File.WriteAllText($@"{path}\receipt.txt", Patient.Receipt);
+                File.WriteAllText($@"{path}\receipt.txt", $"Doctor: {Patient.receipt.doctor.Name} {Patient.receipt.doctor.Surname} \nInfo: \n{Patient.receipt.info}" );
                 MessageBox.Show("Receipt.txt was created!");
             }
         }

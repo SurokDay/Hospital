@@ -18,11 +18,15 @@ namespace Hospital
 
         Patient CurrentPatient;
 
+        Doctor doctor = new Doctor();
+
         public FDoctor(LogInForm logInForm, Doctor doctor)
         {
             InitializeComponent();
 
             LogInForm = logInForm;
+
+            this.doctor = doctor;
 
             LBWelcome.Text = $"Welcome {doctor.Name} {doctor.Surname}";
 
@@ -57,8 +61,10 @@ namespace Hospital
         private void BTNReceipt_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Created receipt");
-            CurrentPatient.Receipt = TBReceipt.Text;
-            CurrentPatient.OutPatientTreatment = CheckB.Checked;
+
+            Receipt receipt = new Receipt(TBReceipt.Text, doctor);
+
+            CurrentPatient.receipt = receipt;
         }
     }
 }
