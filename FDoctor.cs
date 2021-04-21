@@ -13,18 +13,23 @@ namespace Hospital
     public partial class FDoctor : Form
     {
 
+        Form LogInForm;
+
         Data data = new Data();
 
-        string identify;
-        public FDoctor()
+        public FDoctor(LogInForm logInForm)
         {
             InitializeComponent();
+
+            LogInForm = logInForm;
 
             foreach (var item in data.GivePatient())
             {
                 CBDoctor.Items.Add(item.Name +" " +item.Surname);
             }
         }
+
+      
 
         private void CBAdmin_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -38,5 +43,12 @@ namespace Hospital
                 }
             }
         }
+
+        private void BTNreturn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
     }
 }

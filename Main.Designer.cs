@@ -42,8 +42,6 @@ namespace Hospital
             this.Email = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.sp2 = new System.Windows.Forms.TextBox();
-            this.sp1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eye)).BeginInit();
             this.SuspendLayout();
@@ -112,7 +110,6 @@ namespace Hospital
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(185, 31);
             this.Status.TabIndex = 6;
-            this.Status.SelectedIndexChanged += new System.EventHandler(this.Status_SelectedIndexChanged);
             // 
             // Login
             // 
@@ -179,31 +176,9 @@ namespace Hospital
             this.label5.TabIndex = 10;
             this.label5.Text = "Surname:";
             // 
-            // sp2
-            // 
-            this.sp2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sp2.Location = new System.Drawing.Point(370, 470);
-            this.sp2.Name = "sp2";
-            this.sp2.Size = new System.Drawing.Size(185, 30);
-            this.sp2.TabIndex = 16;
-            this.sp2.Visible = false;
-            // 
-            // sp1
-            // 
-            this.sp1.AutoSize = true;
-            this.sp1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sp1.Location = new System.Drawing.Point(188, 470);
-            this.sp1.Name = "sp1";
-            this.sp1.Size = new System.Drawing.Size(123, 35);
-            this.sp1.TabIndex = 15;
-            this.sp1.Text = "Specialist:";
-            this.sp1.Visible = false;
-            // 
             // Main
             // 
             this.ClientSize = new System.Drawing.Size(781, 534);
-            this.Controls.Add(this.sp2);
-            this.Controls.Add(this.sp1);
             this.Controls.Add(this.Surname);
             this.Controls.Add(this.Email);
             this.Controls.Add(this.label2);
@@ -242,7 +217,5 @@ namespace Hospital
         private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox sp2;
-        private System.Windows.Forms.Label sp1;
     }
 }

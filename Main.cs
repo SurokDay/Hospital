@@ -16,7 +16,6 @@ namespace Hospital
         {
             InitializeComponent();
         }
-        Doctor doctor;
 
         //List<Doctor> DoctorsList= new List<Doctor>();
 
@@ -38,9 +37,8 @@ namespace Hospital
                 doctor.Email = Email.Text;
                 doctor.Surname = Surname.Text;
 
-
                 Data data = new Data(doctor);
-                
+
                 Exit();
             }
             else if (Status.Text == "Patient" && Status.Text != "" && Login.Text != "" && Password.Text != "")
@@ -77,7 +75,7 @@ namespace Hospital
 
         private void Exit()
         {
-            LogInForm logInForm = new LogInForm(this, doctor);
+            LogInForm logInForm = new LogInForm(this);
             logInForm.Show();
         }
 
@@ -101,21 +99,6 @@ namespace Hospital
             {
                 this.Close();
             }
-        }
-
-        private void Status_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (Status.SelectedIndex == 0)
-            {
-                sp1.Visible = true;
-                sp2.Visible = true;
-            }
-            else
-            {
-                sp1.Visible = false;
-                sp2.Visible = false;
-            }
-
         }
     }
 }

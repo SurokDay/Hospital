@@ -14,11 +14,9 @@ namespace Hospital
     {
         Form main;
 
-        Doctor doctor;
 
-        public LogInForm(Form form, Doctor doctor)
+        public LogInForm(Form form)
         {
-            this.doctor = doctor;
             main = form;
             InitializeComponent();
 
@@ -28,7 +26,6 @@ namespace Hospital
 
         private void BTNreturn_Click(object sender, EventArgs e)
         {
-            main.Show();
             this.Close();
         }
 
@@ -93,23 +90,17 @@ namespace Hospital
 
         private void Quit(List<Doctor> doctors)
         {
-            this.Close();
-
-            FDoctor fDoctor = new FDoctor();
+            FDoctor fDoctor = new FDoctor(this);
             fDoctor.Show();
         }
         private void Quit(List<Patient> patients)
         {
-            this.Close();
-
             FPatient fPatient = new FPatient();
             fPatient.Show();
         }
         private void Quit(List<Admin> admins)
         {
-            this.Close();
-
-            FAdmin fAdmin = new FAdmin();
+           FAdmin fAdmin = new FAdmin();
             fAdmin.Show();
         }
 

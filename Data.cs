@@ -8,13 +8,16 @@ namespace Hospital
 {
     public class Data
     {
-        public static List<Doctor> ListDoctors = new List<Doctor>() ;
+        public static List<Doctor> ListDoctors = new List<Doctor>()
+        {
+            new Doctor() {Name = "DOleg", Surname = "Formonchuk", Email = "formonchuk@gmail.com"},
+            new Doctor() {Name = "DMax", Surname = "Sherbia", Email = "sherbia@gmail.com"}
+        };
         public static List<Patient> ListPatient = new List<Patient>()
         { 
-            new Patient() {Name = "Alex", Surname = "Makedonskii", Email = "Alex@gmail.com"},
+            new Patient() {Name = "PAlex", Surname = "Makedonskii", Email = "Alex@gmail.com"},
             new Patient() {Name = "Olena", Surname = "Pchilka", Email = "Olena@gmail.com"}
-        }
-        ;
+        };
         public static List<Admin> ListAdmin = new List<Admin>();
 
         public Data()

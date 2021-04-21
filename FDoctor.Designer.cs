@@ -39,7 +39,8 @@ namespace Hospital
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.BTNreturn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LBName
@@ -120,6 +121,7 @@ namespace Hospital
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.Location = new System.Drawing.Point(37, 331);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -135,24 +137,35 @@ namespace Hospital
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // checkBox1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton1.Location = new System.Drawing.Point(513, 351);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(256, 36);
-            this.radioButton1.TabIndex = 13;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "OutPatientTreatment";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox1.Location = new System.Drawing.Point(517, 360);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(249, 36);
+            this.checkBox1.TabIndex = 15;
+            this.checkBox1.Text = "OutPatienTreatment";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // BTNreturn
+            // 
+            this.BTNreturn.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BTNreturn.Location = new System.Drawing.Point(637, 33);
+            this.BTNreturn.Name = "BTNreturn";
+            this.BTNreturn.Size = new System.Drawing.Size(113, 52);
+            this.BTNreturn.TabIndex = 16;
+            this.BTNreturn.Text = "Return";
+            this.BTNreturn.UseVisualStyleBackColor = true;
+            this.BTNreturn.Click += new System.EventHandler(this.BTNreturn_Click);
             // 
             // FDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.BTNreturn);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -182,6 +195,7 @@ namespace Hospital
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button BTNreturn;
     }
 }
