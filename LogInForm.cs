@@ -59,7 +59,7 @@ namespace Hospital
             {
                 if (item.Name == TBlogin.Text && item.Password == TBpass.Text)
                 {
-                    Quit(doctors);
+                    Quit(item);
                 }
             }
         }
@@ -69,7 +69,7 @@ namespace Hospital
             {
                 if (item.Name == TBlogin.Text && item.Password == TBpass.Text)
                 {
-                    Quit(patients);
+                    Quit(item);
                 }
             }
         }
@@ -88,14 +88,14 @@ namespace Hospital
 
        
 
-        private void Quit(List<Doctor> doctors)
+        private void Quit(Doctor doctor)
         {
-            FDoctor fDoctor = new FDoctor(this);
+            FDoctor fDoctor = new FDoctor(this,doctor);
             fDoctor.Show();
         }
-        private void Quit(List<Patient> patients)
+        private void Quit(Patient patient)
         {
-            FPatient fPatient = new FPatient();
+            FPatient fPatient = new FPatient(this, patient);
             fPatient.Show();
         }
         private void Quit(List<Admin> admins)

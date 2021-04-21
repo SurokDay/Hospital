@@ -17,15 +17,17 @@ namespace Hospital
 
         Data data = new Data();
 
-        public FDoctor(LogInForm logInForm)
+        public FDoctor(LogInForm logInForm, Doctor doctor)
         {
             InitializeComponent();
 
             LogInForm = logInForm;
 
+            LBWelcome.Text = $"Welcome {doctor.Name} {doctor.Surname}";
+
             foreach (var item in data.GivePatient())
             {
-                CBDoctor.Items.Add(item.Name +" " +item.Surname);
+                CBDoctor.Items.Add($"{item.Name} {item.Surname}");
             }
         }
 

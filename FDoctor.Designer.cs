@@ -41,6 +41,7 @@ namespace Hospital
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.BTNreturn = new System.Windows.Forms.Button();
+            this.LBWelcome = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LBName
@@ -65,7 +66,7 @@ namespace Hospital
             // CBDoctor
             // 
             this.CBDoctor.FormattingEnabled = true;
-            this.CBDoctor.Location = new System.Drawing.Point(37, 33);
+            this.CBDoctor.Location = new System.Drawing.Point(435, 51);
             this.CBDoctor.Name = "CBDoctor";
             this.CBDoctor.Size = new System.Drawing.Size(151, 28);
             this.CBDoctor.TabIndex = 3;
@@ -121,7 +122,7 @@ namespace Hospital
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.Location = new System.Drawing.Point(37, 331);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -159,11 +160,22 @@ namespace Hospital
             this.BTNreturn.UseVisualStyleBackColor = true;
             this.BTNreturn.Click += new System.EventHandler(this.BTNreturn_Click);
             // 
+            // LBWelcome
+            // 
+            this.LBWelcome.AutoSize = true;
+            this.LBWelcome.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LBWelcome.Location = new System.Drawing.Point(35, 33);
+            this.LBWelcome.Name = "LBWelcome";
+            this.LBWelcome.Size = new System.Drawing.Size(160, 46);
+            this.LBWelcome.TabIndex = 17;
+            this.LBWelcome.Text = "Welcome";
+            // 
             // FDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LBWelcome);
             this.Controls.Add(this.BTNreturn);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
@@ -197,5 +209,6 @@ namespace Hospital
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button BTNreturn;
+        private System.Windows.Forms.Label LBWelcome;
     }
 }
