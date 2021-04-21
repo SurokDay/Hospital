@@ -12,13 +12,18 @@ namespace Hospital
 {
     public partial class Main : Form
     {
+        public bool Return = false;
+
         public Main()
         {
             InitializeComponent();
         }
 
-        //List<Doctor> DoctorsList= new List<Doctor>();
-
+        public Main(bool v)
+        {
+            InitializeComponent();
+            Return = true;
+        }
 
 
         private void SignIn_Click(object sender, EventArgs e) //create example of man and open register form
@@ -76,7 +81,19 @@ namespace Hospital
         private void Exit()
         {
             LogInForm logInForm = new LogInForm(this);
-            logInForm.Show();
+
+            if (Return)
+            {
+                FAdmin fAdmin = new FAdmin();
+                Return = false;
+                fAdmin.Show();
+                this.Close();
+            }
+            else
+            {
+                logInForm.Show();
+
+            }
         }
 
         private void eye_Click(object sender, EventArgs e)

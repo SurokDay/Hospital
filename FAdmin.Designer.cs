@@ -38,8 +38,8 @@ namespace Hospital
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.CheckBoxPatient = new System.Windows.Forms.CheckBox();
+            this.CheckBoxDoctor = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // BTNreturn
@@ -51,6 +51,7 @@ namespace Hospital
             this.BTNreturn.TabIndex = 17;
             this.BTNreturn.Text = "Return";
             this.BTNreturn.UseVisualStyleBackColor = true;
+            this.BTNreturn.Click += new System.EventHandler(this.BTNreturn_Click);
             // 
             // label1
             // 
@@ -108,6 +109,7 @@ namespace Hospital
             this.button2.TabIndex = 27;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -129,27 +131,33 @@ namespace Hospital
             this.label4.TabIndex = 25;
             this.label4.Text = "AddPatient";
             // 
-            // textBox1
+            // CheckBoxPatient
             // 
-            this.textBox1.Location = new System.Drawing.Point(235, 243);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 27);
-            this.textBox1.TabIndex = 28;
+            this.CheckBoxPatient.AutoSize = true;
+            this.CheckBoxPatient.Font = new System.Drawing.Font("Segoe UI", 140F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CheckBoxPatient.Location = new System.Drawing.Point(253, 253);
+            this.CheckBoxPatient.Name = "CheckBoxPatient";
+            this.CheckBoxPatient.Size = new System.Drawing.Size(18, 17);
+            this.CheckBoxPatient.TabIndex = 28;
+            this.CheckBoxPatient.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // CheckBoxDoctor
             // 
-            this.textBox2.Location = new System.Drawing.Point(235, 323);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 27);
-            this.textBox2.TabIndex = 29;
+            this.CheckBoxDoctor.AutoSize = true;
+            this.CheckBoxDoctor.Font = new System.Drawing.Font("Segoe UI", 140F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CheckBoxDoctor.Location = new System.Drawing.Point(253, 317);
+            this.CheckBoxDoctor.Name = "CheckBoxDoctor";
+            this.CheckBoxDoctor.Size = new System.Drawing.Size(18, 17);
+            this.CheckBoxDoctor.TabIndex = 29;
+            this.CheckBoxDoctor.UseVisualStyleBackColor = true;
             // 
             // FAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CheckBoxDoctor);
+            this.Controls.Add(this.CheckBoxPatient);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -177,7 +185,7 @@ namespace Hospital
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.CheckBox CheckBoxPatient;
+        private System.Windows.Forms.CheckBox CheckBoxDoctor;
     }
 }

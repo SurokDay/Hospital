@@ -24,16 +24,15 @@ namespace Hospital
         {
             
         }
+
         public Data(Doctor doctor)
         {
             ListDoctors.Add(doctor);
         }
-
         public Data(Patient patient)
         {
             ListPatient.Add(patient);
         }
-
         public Data(Admin admin)
         {
             ListAdmin.Add(admin);
@@ -43,6 +42,9 @@ namespace Hospital
         {
             return ListDoctors;
         }
+
+       
+
         public List<Patient> GivePatient()
         {
             return ListPatient;
@@ -51,5 +53,15 @@ namespace Hospital
         {
             return ListAdmin;
         }
+
+        public void DeleteDoctors(Doctor doctor)
+        {
+            ListDoctors.Remove(doctor);
+        }
+        public void DeletePatient(Patient patient)
+        {
+            ListPatient.Remove(patient);
+        }
+
     }
 }
