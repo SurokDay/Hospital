@@ -25,10 +25,14 @@ namespace Hospital
             LBsurname.Text = patient.Surname;
             LBemail.Text = patient.Email;
 
+            welcome.Text = $"Welcome {patient.Name} {patient.Surname}";
 
             try
             {
-                patient.receipt.info = LBReceipt.Text;
+                if (patient.receipt.info !="")
+                {
+                    LBReceipt.Text = "You have receipt";
+                };
             }
             catch (Exception)
             {
@@ -54,7 +58,13 @@ namespace Hospital
             {
                 string path = FolderBrowser.SelectedPath;
 
-                File.WriteAllText($@"{path}\receipt.txt", $"Doctor: {Patient.receipt.doctor.Name} {Patient.receipt.doctor.Surname} \nInfo: \n{Patient.receipt.info}" );
+                File.WriteAllText($@"{path}\receipt.txt", 
+                    $"Doctor: {Patient.receipt.doctor.Name} {Patient.receipt.doctor.Surname} " +
+                    $"\nEmail: {Patient.receipt.doctor.Email}" +
+                    $"\nOutPatientTreatment: {Patient.OutPatientTreatment}" +
+                    $"\nInfo: " +
+                    $"\n{Patient.receipt.info}");
+
                 MessageBox.Show("Receipt.txt was created!");
             }
         }

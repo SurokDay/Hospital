@@ -24,7 +24,6 @@ namespace Hospital
         {
             
         }
-
         public Data(Doctor doctor)
         {
             ListDoctors.Add(doctor);

@@ -67,6 +67,14 @@ namespace Hospital
             Receipt receipt = new Receipt(TBReceipt.Text, doctor);
 
             CurrentPatient.receipt = receipt;
+
+
+           
+
+            if (CheckB.Checked)
+            {
+                CurrentPatient.OutPatientTreatment = true;
+            }
         }
     }
 }

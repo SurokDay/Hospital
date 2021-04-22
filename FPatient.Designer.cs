@@ -30,7 +30,7 @@ namespace Hospital
         private void InitializeComponent()
         {
             this.LBWelcome = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.welcome = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Lbname = new System.Windows.Forms.Label();
             this.LBsurname = new System.Windows.Forms.Label();
@@ -57,15 +57,15 @@ namespace Hospital
             this.LBWelcome.UseVisualStyleBackColor = true;
             this.LBWelcome.Click += new System.EventHandler(this.BTNreturn_Click);
             // 
-            // label1
+            // welcome
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(29, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 46);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Welcome";
+            this.welcome.AutoSize = true;
+            this.welcome.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.welcome.Location = new System.Drawing.Point(29, 40);
+            this.welcome.Name = "welcome";
+            this.welcome.Size = new System.Drawing.Size(160, 46);
+            this.welcome.TabIndex = 18;
+            this.welcome.Text = "Welcome";
             // 
             // label2
             // 
@@ -203,7 +203,7 @@ namespace Hospital
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Lbname);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.welcome);
             this.Controls.Add(this.LBWelcome);
             this.Name = "FPatient";
             this.Text = "FPatient";
@@ -214,7 +214,7 @@ namespace Hospital
 
         #endregion
         private System.Windows.Forms.Button LBWelcome;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label welcome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Lbname;
         private System.Windows.Forms.Label LBsurname;
