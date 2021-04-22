@@ -14,7 +14,6 @@ namespace Hospital
     {
         Form main;
 
-
         public LogInForm(Form form)
         {
             main = form;
@@ -85,8 +84,6 @@ namespace Hospital
                 }
             }
         }
-
-       
 
         private void Quit(Doctor doctor)
         {

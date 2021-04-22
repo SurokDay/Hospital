@@ -1,14 +1,6 @@
-3 collection
-
-Doctor
-Patient
-Admin
-
-Log in:
-
-====
-Doctor
-
-
-
-============== Рефакторинг
+Doctors:
+DOleg
+DMax
+Patients:
+POlena
+PAlex

@@ -10,13 +10,13 @@ namespace Hospital
     {
         public static List<Doctor> ListDoctors = new List<Doctor>()
         {
-            new Doctor() {Name = "DOleg", Surname = "Formonchuk", Email = "formonchuk@gmail.com"},
-            new Doctor() {Name = "DMax", Surname = "Sherbia", Email = "sherbia@gmail.com"}
+            new Doctor() {Name = "DOleg", Surname = "Kosenko", Password="1" ,Email = "formonchuk@gmail.com"},
+            new Doctor() {Name = "DMax", Surname = "Sherbia", Password="1" ,Email = "sherbia@gmail.com"}
         };
         public static List<Patient> ListPatient = new List<Patient>()
         { 
-            new Patient() {Name = "PAlex", Surname = "Makedonskii", Email = "Alex@gmail.com"},
-            new Patient() {Name = "Olena", Surname = "Pchilka", Email = "Olena@gmail.com"}
+            new Patient() {Name = "PAlex", Surname = "Makedonskii",Password="1" , Email = "Alex@gmail.com"},
+            new Patient() {Name = "POlena", Surname = "Pchilka",Password="1" , Email = "Olena@gmail.com"}
         };
         public static List<Admin> ListAdmin = new List<Admin>();
 

@@ -28,6 +28,8 @@ namespace Hospital
 
             this.doctor = doctor;
 
+
+
             LBWelcome.Text = $"Welcome {doctor.Name} {doctor.Surname}";
 
             foreach (var item in data.GivePatient())

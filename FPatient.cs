@@ -18,21 +18,23 @@ namespace Hospital
         {
             InitializeComponent();
 
+
             Patient = patient;
 
             Lbname.Text = patient.Name;
             LBsurname.Text = patient.Surname;
             LBemail.Text = patient.Email;
 
-            if (patient.receipt.info == "")
+
+            try
+            {
+                patient.receipt.info = LBReceipt.Text;
+            }
+            catch (Exception)
             {
                 LBReceipt.Text = "You haven't receipt";
+                BTNSave.Enabled = false;
             }
-            else
-            {
-                LBReceipt.Text = "You have receipt";
-            }
-
         }
 
         private void BTNreturn_Click(object sender, EventArgs e)
@@ -47,6 +49,7 @@ namespace Hospital
 
         private void BTNSave_Click(object sender, EventArgs e)
         {
+            
             if (FolderBrowser.ShowDialog() == DialogResult.OK)
             {
                 string path = FolderBrowser.SelectedPath;
@@ -56,6 +59,15 @@ namespace Hospital
             }
         }
 
-       
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You added to the FreeDrugsCours");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
